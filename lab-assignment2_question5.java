@@ -1,25 +1,28 @@
-public class armstrongNumbers {
-
+import java.util.Scanner;
+public class ArmsNumbers {
     public static void main(String[] args) {
-
-        int min = 0, max = 1000;
-
-        for(int num = min + 1; num < max; ++num) {
-            int digitsOFnumber = 0;
-            int result = 0;
-            int initialnumber = num;
-            while (initialnumber != 0) {
-                initialnumber /= 10;
-                ++digitsOFnumber;
+        Scanner scanner =new Scanner(System.in);
+        for(int temp = 0; temp < 10000; temp++){
+            int temp1;
+            int count=0;
+            int a,total=0;
+            temp1 = temp;
+            while(temp1 != 0){
+                temp1/=10;
+                count++;
             }
-            initialnumber = num;
-            while (initialnumber != 0) {
-                int remainder = initialnumber % 10;
-                result += Math.pow(remainder, digitsOFnumber);
-                initialnumber /= 10;
+            temp1= temp;
+
+            while(temp1 != 0) {
+                a = temp1 % 10;
+                total += (int) Math.pow(a,count);
+                temp1 /=10;
             }
-            if (result == num)
-                System.out.print(num + " ");
+            if(total == temp)
+                System.out.println(temp+ " is Armstrong number");
         }
+
+
+
     }
 }
