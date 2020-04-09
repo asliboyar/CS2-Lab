@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class numberofDigits {
+public class numberofDigits {
     public static void main(String Args[]) {
         System.out.println("Enter a number" );
         Scanner in = new Scanner(System.in);
