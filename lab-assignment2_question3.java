@@ -1,39 +1,27 @@
-import java.io.*; 
-  
-class pascalTriangle { 
+import java.util.Scanner;
+  public class PascalTri { 
+    public static void main(String[] args) {
+        Scanner scanner =new Scanner(System.in);
+        int row;
+        int num=1;
+        System.out.println("How many row?");
+        row = scanner.nextInt();
 
-    static void printPascal(int n) 
-    { 
-          
- 
-    for (int row = 0; row < n; row++) 
-    { 
 
-        for (int p = 0; p <= row; p++) 
-        System.out.print(binomialCoeff 
-                        (row, p)+" "); 
-                          
-        System.out.println(); 
-    } 
-    } 
-    static int binomialCoeff(int n, int q) 
-    { 
-        int coe = 1; 
-          
-        if (q > n - q) 
-        q = n - q; 
-              
-        for (int p = 0; p < q; ++p) 
-        { 
-            coe *= (n - p); 
-            coe /= (p + 1); 
-        } 
-        return coe; 
-    } 
-      
-    public static void main(String args[]) 
-    { 
-    int n = 10; 
-    printPascal(n); 
-    } 
-} 
+        for(int i= 0; i<row; i++){
+
+            for(int k=0; k<=i; k++){
+                if(k==0 || i==0){
+                    staticnum=1;
+                }
+                else {num= num*(i-k+1)/k;}
+
+                System.out.print(num);
+            }
+            System.out.print("\n");
+
+        }
+
+
+    }
+}
